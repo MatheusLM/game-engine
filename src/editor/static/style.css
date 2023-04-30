@@ -1,0 +1,114 @@
+:root {
+	font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+	line-height: 1.5;
+	font-weight: 400;
+
+	color-scheme: light dark;
+	color: rgba(255, 255, 255, 0.87);
+
+	font-synthesis: none;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-text-size-adjust: 100%;
+}
+
+html,
+body {
+	box-sizing: border-box;
+	overflow: auto;
+	margin: 0;
+	padding: 0;
+}
+
+editor-interface {
+	position: absolute;
+	width: 100vw;
+	height: 100vh;
+	background-color: #242424;
+	display: grid;
+	grid-template-areas:
+		"editor-menu editor-menu editor-menu"
+		"tree-list game properties-list"
+		"file-list bottom-bar bottom-bar";
+	grid-template-columns: minmax(150px, 250px) 1fr minmax(150px, 250px);
+	grid-template-rows: 30px 1fr minmax(0px, 300px);
+	justify-content: center;
+	align-items: center;
+}
+
+tree-list,
+properties-list,
+editor-menu {
+	background-color: rgba(0, 0, 0, 0.2);
+	height: 100%;
+	width: 100%;
+}
+
+tree-list {
+	grid-area: tree-list;
+}
+
+properties-list {
+	grid-area: properties-list;
+}
+
+editor-menu {
+	display: flex;
+	justify-content: start;
+	gap: 4px;
+	align-items: center;
+	grid-area: editor-menu;
+}
+
+[game-area] {
+	grid-area: game;
+	background-color: rgba(0, 0, 0, 0.5);
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+[game-area] canvas {
+	background-color: black;
+}
+
+.editor-button {
+	width: fit-content;
+	padding: 4px 12px;
+	font-size: 12px;
+	text-transform: uppercase;
+	font-weight: 600;
+	color: #bdd7fa;
+	background-color: rgb(17, 88, 121);
+	cursor: pointer;
+	transition: 0.2s;
+}
+
+.editor-button:hover {
+	color: white;
+	background-color: rgb(31, 106, 141);
+}
+
+*[file-list] {
+	grid-area: file-list;
+	position: absolute;
+	z-index: 999;
+	background-color: black;
+	display: flex;
+	flex-direction: column;
+}
+
+title-element {
+	display: block;
+	color: white;
+	font-size: 12px;
+}
+
+folder-element {
+	display: flex;
+	flex-direction: column;
+	padding-left: 6px;
+}

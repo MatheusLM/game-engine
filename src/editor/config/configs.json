@@ -1,0 +1,21 @@
+{
+	"canvas": {
+		"canvasAreaId": "game-area",
+		"gameAreaAttribute": "game-area"
+	},
+	"editor": {
+		"tags": {
+			"editorInterface": "editor-interface",
+			"canvasNotFound": "canvas-not-found",
+			"editorMenu": "editor-menu",
+			"treeList": "tree-list",
+			"propertiesList": "properties-list",
+			"titleElement": "title-element",
+			"folderElement": "folder-element",
+			"FileSelectorButton": "file-selector-button"
+		}
+	},
+	"data": {
+		"mainJson": "main.json"
+	}
+}
